@@ -36,6 +36,7 @@ const run = async () => {
 
     const url = await repo.createRemoteRepo();
 
+    await repo.createReadme();
     await repo.createGitIgnore();
     await repo.setupRepo(url);
     console.log(chalk.green(`All done!`));
